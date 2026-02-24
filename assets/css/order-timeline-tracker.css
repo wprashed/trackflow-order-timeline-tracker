@@ -1,0 +1,146 @@
+.ott-timeline {
+  --ott-color-active: #146ef5;
+  --ott-color-complete: #1f9d55;
+  --ott-color-muted: #d5dbe3;
+  --ott-color-text: #213043;
+  --ott-color-soft: #f4f7fb;
+  --ott-color-alert: #b42318;
+  --ott-color-warn: #a15b00;
+
+  background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+  border: 1px solid #e1e7ef;
+  border-radius: 12px;
+  padding: 14px;
+  margin: 12px 0;
+  color: var(--ott-color-text);
+}
+
+.ott-track {
+  position: relative;
+  height: 6px;
+  background: var(--ott-color-muted);
+  border-radius: 999px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.ott-track-fill {
+  position: absolute;
+  inset: 0 auto 0 0;
+  background: linear-gradient(90deg, var(--ott-color-active), #3e8dff);
+  transition: width 0.35s ease;
+}
+
+.ott-steps {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.ott-step {
+  text-align: center;
+  font-size: 12px;
+  font-weight: 600;
+  color: #7a8796;
+}
+
+.ott-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto 6px;
+  background: var(--ott-color-muted);
+}
+
+.ott-step.is-complete,
+.ott-step.is-current {
+  color: var(--ott-color-text);
+}
+
+.ott-step.is-complete .ott-dot {
+  background: var(--ott-color-complete);
+}
+
+.ott-step.is-current .ott-dot {
+  background: var(--ott-color-active);
+  box-shadow: 0 0 0 4px rgba(20, 110, 245, 0.12);
+}
+
+.ott-status-row {
+  margin-top: 10px;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.ott-status-badge {
+  display: inline-block;
+  background: var(--ott-color-soft);
+  border: 1px solid #d7e3f5;
+  color: #123661;
+  border-radius: 999px;
+  padding: 4px 10px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.ott-status-text {
+  font-size: 13px;
+}
+
+.ott-state-complete .ott-track-fill {
+  background: linear-gradient(90deg, #168c4e, #2fbf71);
+}
+
+.ott-state-stopped .ott-track-fill,
+.ott-state-refunded .ott-track-fill {
+  background: linear-gradient(90deg, #d9465f, #f97316);
+}
+
+.ott-state-paused .ott-track-fill {
+  background: linear-gradient(90deg, #b06a00, #f2a900);
+}
+
+.ott-state-stopped .ott-status-badge,
+.ott-state-refunded .ott-status-badge {
+  border-color: #f0c2ca;
+  background: #fff2f4;
+  color: var(--ott-color-alert);
+}
+
+.ott-state-paused .ott-status-badge {
+  border-color: #f3d6a4;
+  background: #fff8eb;
+  color: var(--ott-color-warn);
+}
+
+.ott-timeline-compact {
+  min-width: 220px;
+  margin: 0;
+  padding: 10px;
+}
+
+.ott-timeline-compact .ott-label,
+.ott-timeline-compact .ott-status-text {
+  display: none;
+}
+
+.ott-timeline-compact .ott-steps {
+  margin-bottom: 6px;
+}
+
+@media (max-width: 640px) {
+  .ott-step {
+    font-size: 11px;
+  }
+
+  .ott-status-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
