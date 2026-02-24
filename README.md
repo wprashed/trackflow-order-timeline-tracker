@@ -1,8 +1,5 @@
 # Order Timeline Tracker
 
-**Author:** [Rashed Hossain](https://rashed.im/)  
-**WordPress.org Username:** `wprashed`
-
 Order Timeline Tracker is a WooCommerce plugin that replaces plain order status text with a visual timeline/progress bar.
 
 ## Features
