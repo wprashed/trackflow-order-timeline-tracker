@@ -6,8 +6,9 @@
  * Version:           1.0.0
  * Author:            Rashed Hossain
  * Author URI:        https://rashed.im/
- * License:           GPL-2.0-or-later
- * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
+ * License:			  GPL-2.0-or-later
+ * License URI: 	  https://www.gnu.org/licenses/gpl-2.0.html
+ * Requires Plugins:  woocommerce
  * Text Domain:       order-timeline-tracker
  * Domain Path:       /languages
  */
