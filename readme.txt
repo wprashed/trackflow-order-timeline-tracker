@@ -1,5 +1,5 @@
 === TrackFlow - Order Time Tracker for WooCommerce ===
-Contributors: wprashed
+Contributors: bappy6652
 Tags: woocommerce, order status, order tracking, timeline, my account
 Requires at least: 6.0
 Tested up to: 6.9
