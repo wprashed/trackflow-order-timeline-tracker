@@ -1,6 +1,6 @@
-# Order Timeline Tracker
+# TrackFlow - Order Time Tracker for WooCommerce
 
-Order Timeline Tracker is a WooCommerce plugin that replaces plain order status text with a visual timeline/progress bar.
+TrackFlow is a WooCommerce plugin that replaces plain order status text with a visual timeline/progress bar.
 
 ## Features
 
@@ -8,7 +8,7 @@ Order Timeline Tracker is a WooCommerce plugin that replaces plain order status 
 - Full timeline card on the **View Order** page.
 - Full timeline card on the **Order Received (Thank You)** page.
 - Status-aware visual states for processing, completed, on-hold, refunded, failed, and cancelled orders.
-- Translation-ready strings using the `order-timeline-tracker` text domain.
+- Translation-ready strings using the `trackflow-order-time-tracker` text domain.
 
 ## Requirements
 
@@ -18,8 +18,8 @@ Order Timeline Tracker is a WooCommerce plugin that replaces plain order status 
 
 ## Installation
 
-1. Copy the `order-timeline-tracker` folder to `wp-content/plugins/`.
-2. Activate **Order Timeline Tracker** in WordPress admin.
+1. Copy the `trackflow-order-time-tracker` folder to `wp-content/plugins/`.
+2. Activate **TrackFlow - Order Time Tracker for WooCommerce** in WordPress admin.
 3. Open your WooCommerce customer account pages to verify timeline rendering.
 
 ## Developer Notes
@@ -30,7 +30,7 @@ Order Timeline Tracker is a WooCommerce plugin that replaces plain order status 
   - `woocommerce_view_order`
   - `woocommerce_thankyou`
 - Filter for timeline labels:
-  - `ott_timeline_steps`
+  - `trackflow_timeline_steps`
 
 ## Security and Standards
 
@@ -43,4 +43,4 @@ This plugin follows WordPress plugin coding standards by:
 ## Changelog
 
 ### 1.0.0
-- Initial release.
+- Initial release under the name TrackFlow.
