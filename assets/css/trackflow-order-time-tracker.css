@@ -1,0 +1,146 @@
+.trackflow-timeline {
+  --trackflow-color-active: #146ef5;
+  --trackflow-color-complete: #1f9d55;
+  --trackflow-color-muted: #d5dbe3;
+  --trackflow-color-text: #213043;
+  --trackflow-color-soft: #f4f7fb;
+  --trackflow-color-alert: #b42318;
+  --trackflow-color-warn: #a15b00;
+
+  background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+  border: 1px solid #e1e7ef;
+  border-radius: 12px;
+  padding: 14px;
+  margin: 12px 0;
+  color: var(--trackflow-color-text);
+}
+
+.trackflow-track {
+  position: relative;
+  height: 6px;
+  background: var(--trackflow-color-muted);
+  border-radius: 999px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.trackflow-track-fill {
+  position: absolute;
+  inset: 0 auto 0 0;
+  background: linear-gradient(90deg, var(--trackflow-color-active), #3e8dff);
+  transition: width 0.35s ease;
+}
+
+.trackflow-steps {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.trackflow-step {
+  text-align: center;
+  font-size: 12px;
+  font-weight: 600;
+  color: #7a8796;
+}
+
+.trackflow-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto 6px;
+  background: var(--trackflow-color-muted);
+}
+
+.trackflow-step.is-complete,
+.trackflow-step.is-current {
+  color: var(--trackflow-color-text);
+}
+
+.trackflow-step.is-complete .trackflow-dot {
+  background: var(--trackflow-color-complete);
+}
+
+.trackflow-step.is-current .trackflow-dot {
+  background: var(--trackflow-color-active);
+  box-shadow: 0 0 0 4px rgba(20, 110, 245, 0.12);
+}
+
+.trackflow-status-row {
+  margin-top: 10px;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.trackflow-status-badge {
+  display: inline-block;
+  background: var(--trackflow-color-soft);
+  border: 1px solid #d7e3f5;
+  color: #123661;
+  border-radius: 999px;
+  padding: 4px 10px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.trackflow-status-text {
+  font-size: 13px;
+}
+
+.trackflow-state-complete .trackflow-track-fill {
+  background: linear-gradient(90deg, #168c4e, #2fbf71);
+}
+
+.trackflow-state-stopped .trackflow-track-fill,
+.trackflow-state-refunded .trackflow-track-fill {
+  background: linear-gradient(90deg, #d9465f, #f97316);
+}
+
+.trackflow-state-paused .trackflow-track-fill {
+  background: linear-gradient(90deg, #b06a00, #f2a900);
+}
+
+.trackflow-state-stopped .trackflow-status-badge,
+.trackflow-state-refunded .trackflow-status-badge {
+  border-color: #f0c2ca;
+  background: #fff2f4;
+  color: var(--trackflow-color-alert);
+}
+
+.trackflow-state-paused .trackflow-status-badge {
+  border-color: #f3d6a4;
+  background: #fff8eb;
+  color: var(--trackflow-color-warn);
+}
+
+.trackflow-timeline-compact {
+  min-width: 220px;
+  margin: 0;
+  padding: 10px;
+}
+
+.trackflow-timeline-compact .trackflow-label,
+.trackflow-timeline-compact .trackflow-status-text {
+  display: none;
+}
+
+.trackflow-timeline-compact .trackflow-steps {
+  margin-bottom: 6px;
+}
+
+@media (max-width: 640px) {
+  .trackflow-step {
+    font-size: 11px;
+  }
+
+  .trackflow-status-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
