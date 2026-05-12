@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name:       TrackFlow - Order Time Tracker for WooCommerce
- * Plugin URI:        https://rashed.im/
+ * Plugin URI:        https://github.com/wprashed/trackflow-order-timeline-tracker
  * Description:       Adds a visual WooCommerce order timeline progress bar in place of plain status text.
  * Version:           1.0.0
  * Author:            Rashed Hossain
